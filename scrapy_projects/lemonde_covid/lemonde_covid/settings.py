@@ -67,7 +67,8 @@ DEFAULT_REQUEST_HEADERS = {
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'lemonde_covid.pipelines.MongodbPipeline': 300,
+   #'lemonde_covid.pipelines.MongodbPipeline': 300,
+   'lemonde_covid.pipelines.ElasticSearchPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
