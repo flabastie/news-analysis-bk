@@ -26,9 +26,12 @@ class MongodbPipeline(object):
         return item
 
 class ElasticSearchPipeline(object):
-    index_name = "3months_covid"
+    ''' Import data to ElasticSerach db '''
+    #index_name = "news_analysis"
+    index_name = "2months_covid"
 
     def open_spider(self, spider):
+        ''' Connection to ElasticSerach db '''
         logging.warning("SPIDER OPENED FROM PIPELINE")
         self.es = Elasticsearch(
             ['https://00e8f2e302a74e0eafaa5aceffe44491.francecentral.azure.elastic-cloud.com:9243'],
@@ -37,8 +40,10 @@ class ElasticSearchPipeline(object):
             port=443,)
 
     def close_spider(self, spider):
+        ''' Close connection to ElasticSerach db '''
         logging.warning("SPIDER CLOSED FROM PIPELINE")
 
     def process_item(self, item, spider):
+        ''' Insert data to ElasticSerach db '''
         self.es.index(index=self.index_name, body=item)
         return item

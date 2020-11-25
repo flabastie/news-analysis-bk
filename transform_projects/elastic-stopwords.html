@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module elastic-stopwords</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>elastic-stopwords</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/mnt/batch/tasks/shared/LS_root/mounts/clusters/news-evolution/code/Users/flabastie/news/transform_projects/elastic-stopwords.py">/mnt/batch/tasks/shared/LS_root/mounts/clusters/news-evolution/code/Users/flabastie/news/transform_projects/elastic-stopwords.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="json.html">json</a><br>
+</td><td width="25%" valign=top><a href="nltk.html">nltk</a><br>
+</td><td width="25%" valign=top><a href="pprint.html">pprint</a><br>
+</td><td width="25%" valign=top><a href="re.html">re</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="elastic-stopwords.html#TransformationData">TransformationData</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="TransformationData">class <strong>TransformationData</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#TransformationData">TransformationData</a>(index_name)<br>
+&nbsp;<br>
+Data&nbsp;transformationData&nbsp;:&nbsp;Tokenizer&nbsp;and&nbsp;stopwords<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="TransformationData-__init__"><strong>__init__</strong></a>(self, index_name)</dt><dd><tt>Create&nbsp;an&nbsp;Elasticsearch&nbsp;connection&nbsp;<a href="builtins.html#object">object</a><br>
+:param&nbsp;index_name:&nbsp;index&nbsp;name<br>
+:type&nbsp;index_name:&nbsp;string<br>
+:return:&nbsp;null</tt></dd></dl>
+
+<dl><dt><a name="TransformationData-liste_auteurs"><strong>liste_auteurs</strong></a>(self)</dt><dd><tt>Get&nbsp;auteurs&nbsp;list<br>
+:param&nbsp;self:&nbsp;self<br>
+:type&nbsp;self:&nbsp;None<br>
+:return:&nbsp;liste_auteurs<br>
+:rtype:&nbsp;list</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>es</strong> = None</dl>
+
+<dl><dt><strong>index_name</strong> = None</dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>auteurs_list</strong> = ['Le Monde avec AFP', 'Le Monde', 'Collectif', 'Gilles Paris', 'Cécile Ducourtieux', 'Arnaud Leparmentier', 'Frédéric Lemaître', 'Eric Béziat', 'Patrick Roger', 'Béatrice Madeline', 'Laurence Girard', 'Jean-Pierre Stroobants', 'Le Monde avec AFP et Reuters', 'Sandrine Morel', 'Philippe Escande', 'Eric Albert', 'Juliette Garnier', 'Les Décodeurs', 'Virginie Malingre', 'Denis Cosnard', ...]<br>
+<strong>stopwords</strong> = &lt;WordListCorpusReader in '.../corpora/stopwords' (not loaded yet)&gt;<br>
+<strong>transformData</strong> = &lt;elastic-stopwords.TransformationData object&gt;</td></tr></table>
+</body></html>

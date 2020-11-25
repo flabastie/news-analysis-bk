@@ -4,9 +4,14 @@ import re
 from datetime import datetime
 import nltk
 
-class LmLoginSpider(scrapy.Spider):
+# scrapy crawl lm_covid
+
+class LmScraperSpider(scrapy.Spider):
+    ''' Spider Scraper for LeMonde.fr '''
+    #date_start = '02/11/2020'
+    #date_end = '22/11/2020'
     date_start = '01/01/2020'
-    date_end = '15/11/2020'
+    date_end = '01/03/2020'
     page_number = 1
     url_list = f"https://www.lemonde.fr/recherche/?search_keywords=covid&start_at={date_start}&end_at={date_end}&search_sort=date_asc&page="
     name = 'lm_covid'
@@ -18,6 +23,13 @@ class LmLoginSpider(scrapy.Spider):
     # -------------------------
 
     def document_cleaner(self, raw_content):
+        '''
+        Returns the cleaned string of the content
+                Parameters:
+                        raw_content (str): raw content
+                Returns:
+                        cleaned_string (str): cleaned string
+        '''
         cleaned_list =[]
         cleanr = re.compile('<.*?>|&([a-z0-9]+|#[0-9]{1,6}|#x[0-9a-f]{1,6});')
         # iterate in raw_content list
@@ -133,6 +145,10 @@ class LmLoginSpider(scrapy.Spider):
         doc_text = self.document_cleaner(document_html)
         # concatenate title + teaser + doc_text
         doc_all = document_title + '. ' + document_teaser + ' ' + doc_text
+        # empty field tokens
+        doc_token = []
+        # empyty field stemming
+        doc_stem = []
         
         yield {
             'link':document_link, 
@@ -144,5 +160,8 @@ class LmLoginSpider(scrapy.Spider):
             'author':document_author, 
             'content_html':document_html, 
             'content_text':doc_text, 
-            'content_all':doc_all}
+            'content_all':doc_all,
+            'doc_token': doc_token,
+            'doc_stem': doc_stem
+            }
 
