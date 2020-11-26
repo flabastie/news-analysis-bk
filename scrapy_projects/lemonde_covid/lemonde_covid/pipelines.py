@@ -27,8 +27,8 @@ class MongodbPipeline(object):
 
 class ElasticSearchPipeline(object):
     ''' Import data to ElasticSerach db '''
-    #index_name = "news_analysis"
-    index_name = "2months_covid"
+    index_name = "news_analysis"
+    #index_name = "2months_covid"
 
     def open_spider(self, spider):
         ''' Connection to ElasticSerach db '''
